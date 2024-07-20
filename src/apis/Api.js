@@ -28,18 +28,53 @@ export const loginApi = (data) => Api.post("/api/user/login", data)
 // create change password api
 export const changePasswordApi = (data) => Api.post("/api/user/changepassword", data)
 
+//create profile api 
+export const profileApi = (data) => Api.post("/api/user/profile", data)
+
+//create payment api 
+export const paymentApi = (data) => Api.post("/api/user/payment", data)
+
+//create editprofile api 
+export const editprofileApi = (data) => Api.post("/api/user/editprofile", data)
+
 // create product API
 export const createProductApi = (formData) => Api.post('/api/product/create_product', formData, config)
 
 // get products API
 export const getAllProductsApi = () => Api.get('/api/product/get_products')
 
+// get products API
+export const cartApi = () => Api.get('/api/product/cart')
+
 // get single product API
 export const getSingleProductApi = (id) => Api.get(`/api/product/get_product/${id}`)
 
 // update product
 export const updateProductApi 
-        = (id, formData) => Api.put(`/api/product/update_product/${id}`, formData, config)
+        = (id, formData) => Api.put(`/api/product/update_product/${id}`, formData)
 
 // delete product
 export const deleteProductApi = (id) => Api.delete(`/api/product/delete_product/${id}`, config)
+
+//addtocart
+export const create_order = (orderData) =>
+  Api.post(`/api/product/create_Order`, orderData, config);
+ 
+  // /api/createorder
+ 
+// export const create_order = () => Api.get("/api/product/create_order");
+ 
+ 
+  export const  getallorderapi= (id) => Api.get(`/api/product/get_order/${id}`);
+ 
+  export const getAllUserorderApi=(id)=> Api.get(`/api/product/get_order/${id}`);
+
+
+
+
+  // New API functions for sale products
+export const createSaleProductApi = (saleData) => axios.post('/api/sales', saleData);
+export const getAllSaleProductsApi = () => axios.get('/api/sales');
+
+
+

@@ -4,15 +4,13 @@ import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
 
 const ChangePassword = () => {
-  const user = JSON.parse(localStorage.getItem("user"))
+  const user = JSON.parse(localStorage.getItem("user"));
   const userId = user?._id;
   const navigate = useNavigate();
 
-  // make useState
   const [oldPassword, setOldPassword] = useState('');
   const [newPassword, setNewPassword] = useState('');
 
-  // make change function
   const changeOldPassword = (e) => {
     setOldPassword(e.target.value);
   };
@@ -31,15 +29,13 @@ const ChangePassword = () => {
       userId: userId
     };
 
-    // api call
     changePasswordApi(data)
       .then((res) => {
         if (res.data.success === false) {
           toast.error(res.data.message);
         } else {
           toast.success(res.data.message);
-          // Redirect or perform any other action after changing the password
-          navigate('/profile'); // Redirect to the user's profile or dashboard
+          navigate('/profile');
         }
       })
       .catch((err) => {
@@ -50,22 +46,53 @@ const ChangePassword = () => {
 
   return (
     <div>
-      
+      <style>{`
+        .card {
+          max-width: 700px;
+          margin-left: 50px;
+        }
+        .card img {
+          width: 30%;
+          height: auto;
+        }
+        .card h1 {
+          color: black;
+        }
+        .form-label {
+          color: black;
+          text-align: left;
+          display: block; /* Ensures label is displayed as block */
+          margin-bottom: 0.5rem; /* Adds spacing below the label */
+          font-weight: bold;
+        }
+        .form-control {
+          margin-bottom: 1rem;
+        }
+        
+        .btn-submit {
+          width: 100%;
+          background-color: black;
+          color: white;
+        }
+        .center-button-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      `}</style>
 
       <div className="d-flex justify-content-center align-items-center vh-100">
-        <div className="card p-4 rounded shadow-lg" style={{ maxWidth: '400px', marginLeft: '20px' }}>
-        <center>
-        <img
-        src="/images/changepassword.png" 
-        alt="Change Password"
-        style={{ width: '80%', height: '40%' }}
-      /></center>
-          <h1 className="mb-4 text-center text-black">Change Password</h1>
+        <div className="card p-5 rounded shadow-lg">
+          <center>
+            <img
+              src="/images/changepassword.png" 
+              alt="Change Password"
+            />
+          </center>
+          <h1 className="mb-4 text-center">Change Password</h1>
           <form className="w-100">
             <div className="mb-3">
-              <label htmlFor="oldPassword" className="form-label text-white">
-                Old Password
-              </label>
+              <label htmlFor="oldPassword" className="form-label">Old Password</label>
               <input
                 onChange={changeOldPassword}
                 value={oldPassword}
@@ -77,9 +104,7 @@ const ChangePassword = () => {
             </div>
 
             <div className="mb-3">
-              <label htmlFor="newPassword" className="form-label text-white">
-                New Password
-              </label>
+              <label htmlFor="newPassword" className="form-label">New Password</label>
               <input
                 onChange={changeNewPassword}
                 value={newPassword}
@@ -90,8 +115,8 @@ const ChangePassword = () => {
               />
             </div>
 
-            <button onClick={handleSubmit} className="btn btn-light w-100" type="submit">
-              Change Password
+            <button onClick={handleSubmit} className="btn btn-secondary btn-submit" type="submit">
+              Submit
             </button>
           </form>
         </div>
