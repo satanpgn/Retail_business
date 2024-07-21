@@ -57,7 +57,7 @@ const Login = () => {
       >
         <div className="login-container" style={{ border: '3px solid #000000', borderRadius: '20px', borderBlockColor:'black', padding: '80px' }}>
         
-          <h1 style={{textAlign: 'left', color: 'black', marginTop: '0', marginBottom: '20px', fontSize: '4em'}}>Login Here!</h1>
+          <h1 style={{textAlign: 'left', color: 'Green', marginTop: '0', marginBottom: '20px', fontSize: '4em'}}>Login Here!</h1>
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end' }}>
   <img
     className="mx-auto"
