@@ -90,10 +90,10 @@ const AdminEditProduct = () => {
 
             <label htmlFor="">Select category</label>
             <select value={productCategory} onChange={(e) => setProductCategory(e.target.value)} className='form-control mb-2'>
-              <option value="Gaming Chairs">For Mariage</option>
-              <option value="Gaming Headphones">Birthday Celebration</option>
-              <option value="Gaming PC">Indoor Plants </option>
-              <option value="Gaming Laptop">Outdoor Plants</option>
+              <option value="Clothes">Clothes</option>
+              <option value="Shoes">Shoes</option>
+              <option value="Watches">Watches </option>
+              <option value="Gaming Laptop">Gaming Laptops</option>
             </select>
 
             <label>Product Image</label>
