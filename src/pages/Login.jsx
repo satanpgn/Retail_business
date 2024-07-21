@@ -58,14 +58,23 @@ const Login = () => {
         <div className="login-container" style={{ border: '3px solid #000000', borderRadius: '20px', borderBlockColor:'black', padding: '80px' }}>
         
           <h1 style={{textAlign: 'left', color: 'Green', marginTop: '0', marginBottom: '20px', fontSize: '4em'}}>Login Here!</h1>
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end' }}>
+          {/* <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end' }}>
   <img
     className="mx-auto"
     src="/images/logo.jpg"
     alt="login img"
     style={{ height: '200px', width: '200px' }}
   />
+</div> */}
+<div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end' }}>
+  <img
+    className="mx-auto"
+    src="/images/logo.jpg"
+    alt="login img"
+    style={{ height: '150px', width: '150px', borderRadius: '50%' }}
+  />
 </div>
+
 
           <form className="w-100" onSubmit={handleSubmit}>
             <div className="form-group fw-bold m-2 ">
