@@ -56,7 +56,17 @@ const Login = () => {
         }}
       >
         <div className="login-container" style={{ border: '3px solid #000000', borderRadius: '20px', borderBlockColor:'black', padding: '80px' }}>
+        
           <h1 style={{textAlign: 'left', color: 'black', marginTop: '0', marginBottom: '20px', fontSize: '4em'}}>Login Here!</h1>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end' }}>
+  <img
+    className="mx-auto"
+    src="/images/logo.jpg"
+    alt="login img"
+    style={{ height: '200px', width: '200px' }}
+  />
+</div>
+
           <form className="w-100" onSubmit={handleSubmit}>
             <div className="form-group fw-bold m-2 ">
               <label style={{ color: 'black',textAlign:'center' }}>Email</label>

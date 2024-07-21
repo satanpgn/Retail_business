@@ -82,6 +82,16 @@ const Register = () => {
       >
         <div className="register-container" style={{ border: '3px solid #000000', borderRadius: '20px', padding: '35px', borderBlockColor:'black'}}>
           <h1 style={{textAlign: 'left', color: 'black', marginTop: '0', marginBottom: '20px', fontSize: '3em'}}>Create Your Account!</h1>
+       
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end' }}>
+  <img
+    className="mx-auto"
+    src="/images/logo.jpg"
+    alt="login img"
+    style={{ height: '200px', width: '200px' }}
+  />
+</div>
+
 
         {/* Logo Image
         <div style={{ textAlign: 'center', marginBottom: '20px' }}>

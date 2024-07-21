@@ -54,9 +54,18 @@ const Navbar = () => {
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid d-flex justify-content-between align-items-center">
           <div>
+  <img
+    className="mx-auto h-20 w-auto"
+    src="/images/logo.jpg"
+    alt="login img"
+    style={{ height: '150px', width: '150px' }}
+  />
+
             <Link className="navbar-brand fw-bold fs-4" to="#" style={{ color: 'Green', fontFamily: 'Arial, sans-serif' }}>
               Retail Business
             </Link>
+           
+            
             <button
               className="navbar-toggler"
               type="button"
